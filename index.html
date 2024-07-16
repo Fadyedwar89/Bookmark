@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="img/download.jpeg" type="image/x-png">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min copy.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Bookmark</title>
+
+</head>
+
+<body>
+    <div class="position-relative  ">
+        <main class="  d-flex flex-column justify-content-center align-items-center ">
+            <h1 class=" position-relative my-5">Bookmarker</h1>
+
+            <div class=" container  mx-auto border-dot">
+                <h2 class="text-center py-4">
+                    <i class=" fa-solid fa-bookmark "></i>
+                    Bookmark your favorite sites
+                    <i class=" fa-solid fa-bookmark "></i>
+                </h2>
+
+                <label for="Site Name" class="form-label "><i class="fa-solid fa-book-bookmark p-1"></i> Site
+                    Name</label>
+                <input type="text" oninput="validationInput(this)" class="  form-control mb-4 " id="SiteName"
+                    placeholder="Bookmarker Name">
+
+                <label for="Site URL" class="form-label"><i class="fa-solid fa-link p-1"></i> Site URL</label>
+                <input type="text" oninput="validationInput(this)" class="form-control" id="SiteURL"
+                    placeholder="Website URL">
+
+                <button class=" px-5  my-4 d-block mx-auto btn btn-main">Submit</button>
+            </div>
+
+            <table class=" container table text-center mt-4 mb-5 ">
+                <thead>
+                    <tr>
+                        <th class="py-2 ">Index</th>
+                        <th class="py-2 ">Website Name</th>
+                        <th class="py-2 ">Visit</th>
+                        <th class="py-2 ">Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+
+                </tbody>
+            </table>
+        </main>
+        <!-- ========== Start error layer ========== -->
+        <layer id="error"
+            class=" d-none  bg-layer top-0 bottom-0 end-0 start-0 d-flex align-items-center justify-content-center">
+            <div class="  p-4 w-35 bg-white rounded-1">
+                <div class="d-flex justify-content-between align-items-center pb-3">
+                    <div class="d-flex">
+                        <span class=" cricle rounded-circle bg-danger me-2"></span>
+                        <span class=" cricle rounded-circle bg-warning me-2"></span>
+                        <span class=" cricle rounded-circle bg-success me-2"></span>
+                    </div>
+                    <i class=" cursor-pointer fa-solid fa-xmark fs-3"></i>
+                </div>
+                <p>Site Name or Url is not valid, Please follow the rules below :</p>
+
+                <ol class=" list-unstyled m-0">
+                    <li>
+                        <i class="fa-regular fa-circle-right p-2"></i>
+                        Site name must contain at least 3 characters
+                    </li>
+                    <li>
+                        <i class="fa-regular fa-circle-right p-2"></i>
+                        Site URL must be a valid one
+                    </li>
+                </ol>
+            </div>
+        </layer>
+    </div>
+    <!-- ========== End error layer ========== -->
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
